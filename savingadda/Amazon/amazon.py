@@ -11,8 +11,8 @@ def scrape_amazon(url, no_products):
     data = soup.find_all("li", {"id":"result_0"})
     ans = data[0].find_all("a",{"class":"a-link-normal"})[0]
     answer= ans.get("href")
-    """
-    print data
+    
+    #print data
     product_name = []
     image_url = []
     price = []
@@ -34,7 +34,7 @@ def scrape_amazon(url, no_products):
     product_name_final = product_name[:no_products]
     image_url_final = image_url[:no_products]
     price_final = price[:no_products]
-    link_final = link[:no_products]"""
+    link_final = link[:no_products] #
 
     #temp=str(link_final[0])
     listing=answer.split('/')
